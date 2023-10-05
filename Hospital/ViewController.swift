@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btnAdd: UIButton!
-    @IBOutlet weak var labelList: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +22,12 @@ class ViewController: UIViewController {
     }
 
     private func initContents(){
-        labelList.text = Constants.Strings.hospital_list_title
+        self.navigationItem.title = Constants.Strings.hospital_list_title
         btnAdd.setTitle(Constants.Strings.hospital_list_btn_add, for: UIControl.State.normal)
         btnAdd.setTitle(Constants.Strings.hospital_list_btn_add, for: UIControl.State.selected)
-        
+
     }
-    
+
     @IBAction func addHospital(_ sender: Any) {
 //        self.performSegue(withIdentifier: Constants.Strings.seg_home_to_detail, sender: nil)
         let sb_main = UIStoryboard(name: "Main", bundle: nil)
@@ -37,17 +36,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc_detail, animated: true)
 
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//        case Constants.Strings.seg_home_to_detail:
-//            guard var vc_detail = segue.destination as? HospitalDetailVC else {return}
-//            vc_detail.hospital_data = "hospital name"
-//        default:
-//            print("Tag: HomePage; No such segue identifier.")
-//
-//        }
-    }
+
     
 }
 
