@@ -29,12 +29,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addHospital(_ sender: Any) {
-//        self.performSegue(withIdentifier: Constants.Strings.seg_home_to_detail, sender: nil)
+        print("asdasdasdasd")
         let sb_main = UIStoryboard(name: "Main", bundle: nil)
-        var vc_detail: HospitalDetailVC = sb_main.instantiateViewController(withIdentifier: Constants.Strings.id_vc_hospital_detail) as! HospitalDetailVC
+        let vc_detail: HospitalDetailVC = sb_main.instantiateViewController(withIdentifier: Constants.Strings.id_vc_hospital_detail) as! HospitalDetailVC
 //        vc_detail.hospital_data = "hospital name"
         self.navigationController?.pushViewController(vc_detail, animated: true)
-
+        
+        
     }
 
     

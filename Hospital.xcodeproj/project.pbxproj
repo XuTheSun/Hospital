@@ -15,6 +15,8 @@
 		579B045B2ACCD6560006DA80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579B04592ACCD6560006DA80 /* Main.storyboard */; };
 		579B045D2ACCD6570006DA80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579B045C2ACCD6570006DA80 /* Assets.xcassets */; };
 		579B04602ACCD6570006DA80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579B045E2ACCD6570006DA80 /* LaunchScreen.storyboard */; };
+		57B94B922ACF8AF100B4B1AB /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B94B912ACF8AF100B4B1AB /* Hospital.swift */; };
+		57B94B942ACF99AD00B4B1AB /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57B94B932ACF99AD00B4B1AB /* Property List.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		579B045C2ACCD6570006DA80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		579B045F2ACCD6570006DA80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		579B04612ACCD6570006DA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B94B912ACF8AF100B4B1AB /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		57B94B932ACF99AD00B4B1AB /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 		579B04472ACCD6560006DA80 = {
 			isa = PBXGroup;
 			children = (
+				57B94B932ACF99AD00B4B1AB /* Property List.plist */,
 				579B04522ACCD6560006DA80 /* Hospital */,
 				579B04512ACCD6560006DA80 /* Products */,
 			);
@@ -64,6 +69,7 @@
 				579B04552ACCD6560006DA80 /* SceneDelegate.swift */,
 				579B04572ACCD6560006DA80 /* ViewController.swift */,
 				5789E1E42ACCEE89001A2DB1 /* HospitalDetailVC.swift */,
+				57B94B912ACF8AF100B4B1AB /* Hospital.swift */,
 				579B04592ACCD6560006DA80 /* Main.storyboard */,
 				5789E1E22ACCE50D001A2DB1 /* Constants.swift */,
 				579B045C2ACCD6570006DA80 /* Assets.xcassets */,
@@ -133,6 +139,7 @@
 			files = (
 				579B04602ACCD6570006DA80 /* LaunchScreen.storyboard in Resources */,
 				579B045D2ACCD6570006DA80 /* Assets.xcassets in Resources */,
+				57B94B942ACF99AD00B4B1AB /* Property List.plist in Resources */,
 				579B045B2ACCD6560006DA80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +156,7 @@
 				579B04562ACCD6560006DA80 /* SceneDelegate.swift in Sources */,
 				5789E1E52ACCEE89001A2DB1 /* HospitalDetailVC.swift in Sources */,
 				5789E1E32ACCE50D001A2DB1 /* Constants.swift in Sources */,
+				57B94B922ACF8AF100B4B1AB /* Hospital.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

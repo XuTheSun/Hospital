@@ -9,8 +9,6 @@ import UIKit
 
 class HospitalDetailVC: UIViewController {
     
-    var hospital_data = ""
-    
     @IBOutlet weak var labelHospName: UILabel!
     @IBOutlet weak var tfHospName: UITextField!
     @IBOutlet weak var labelHospAddr: UILabel!
@@ -28,6 +26,7 @@ class HospitalDetailVC: UIViewController {
     @IBOutlet weak var labelEmgContact: UILabel!
     @IBOutlet weak var tfEmgContact: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,11 +36,9 @@ class HospitalDetailVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
     }
     
+    
     private func initContent(){
         self.title = Constants.Strings.hospital_add_title
-        self.navigationItem.leftBarButtonItem?.title = Constants.Strings.navi_back
-        self.navigationItem.backBarButtonItem?.title = Constants.Strings.navi_back
-        let navi = self.navigationItem
         labelHospName.text = Constants.Strings.hospital_add_name
         labelHospAddr.text = Constants.Strings.hospital_add_address
         labelOpdContact.text = Constants.Strings.hospital_add_opd_contact
@@ -54,15 +51,20 @@ class HospitalDetailVC: UIViewController {
         btnSubmit.setTitle(Constants.Strings.hospital_add_btn_submit, for: UIControl.State.selected)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func checkInput() -> Bool{
+        return true
     }
-    */
+    
+
+    @IBAction func submit(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        
+        // testing UserDefault
+        var dic2: [String: Any] = ["name":"123", "address":"here","opd": "123", "website": "www.aaa.com", "single_num": 0, "doctor_num": 0, "nursing_num": 0, "emg_contact": "123123123", "patients": [["name":"123", "address":"here", "contact": "me", "doctor": "me", "room_num": 100, "cashless": false, "med_history": "None"], ["name":"123", "address":"here", "contact": "me", "doctor": "me", "room_num": 100, "cashless": false, "med_history": "None"]]]
+        UserDefaults.standard.set([dic2], forKey: Constants.Strings.key_hospitals)
+        let result = UserDefaults.standard.array(forKey: Constants.Strings.key_hospitals)
+        print(result)
+    }
+ 
 
 }
